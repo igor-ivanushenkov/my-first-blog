@@ -66,3 +66,12 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+
+def about(request):
+    """
+    Список всех опубликованных постов с сортировкой п дате публикации
+    :param request:
+    :return:
+    """
+    return render(request, 'blog/about.html')
